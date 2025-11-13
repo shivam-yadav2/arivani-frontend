@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
 import {
   Field,
   FieldDescription,
@@ -14,7 +15,7 @@ import {
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -65,7 +66,7 @@ const Update = () => {
     getTask()
   },[])
 
-
+  const navigate = useNavigate();
 
   const handelSubmit = async (e) => {
     e.preventDefault();
@@ -90,6 +91,7 @@ const Update = () => {
       .then((response) => {
         toast.success("Task Updated Successfully");
         console.log(response);
+        navigate("/dashboard")
       })
       .catch((error) => {
         console.log(error);
@@ -162,7 +164,7 @@ const Update = () => {
 
               <FieldGroup>
                 <Field>
-                  <Button type="submit">Create Task</Button>
+                  <Button type="submit">Update Task</Button>
 
                   <NavLink to="/dashboard">
                     <Button>Go Back</Button>

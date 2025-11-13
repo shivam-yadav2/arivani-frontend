@@ -14,7 +14,7 @@ import {
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -26,6 +26,7 @@ const Create = () => {
     status: "",
   });
 
+  const navigate = useNavigate();
   const handelSubmit = async (e) => {
     e.preventDefault();
 
@@ -48,6 +49,7 @@ const Create = () => {
       .request(config)
       .then((response) => {
         toast.success("Task Created Successfully");
+        navigate("/dashboard");
         console.log(response);
       })
       .catch((error) => {
