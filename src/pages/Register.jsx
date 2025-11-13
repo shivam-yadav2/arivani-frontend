@@ -40,7 +40,7 @@ const Register = () => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://localhost:3000/api/users/register",
+      url: "https://test.traficoanalytica.com/api/users/register",
       headers: {
         "Content-Type": "application/json",
       },

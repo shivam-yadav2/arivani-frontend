@@ -33,7 +33,7 @@ const Dashboard = () => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "http://localhost:3000/api/tasks/get-task",
+      url: "https://test.traficoanalytica.com/api/tasks/get-task",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -60,7 +60,7 @@ const Dashboard = () => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: `http://localhost:3000/api/tasks/delete-task/${id}`,
+      url: `https://test.traficoanalytica.com/api/tasks/delete-task/${id}`,
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,

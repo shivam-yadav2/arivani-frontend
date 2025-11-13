@@ -37,7 +37,7 @@ const Update = () => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: `http://localhost:3000/api/tasks/get-task/${id}`,
+      url: `https://test.traficoanalytica.com/api/tasks/get-task/${id}`,
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -73,7 +73,7 @@ const Update = () => {
     let config = {
       method: "put",
       maxBodyLength: Infinity,
-      url: `http://localhost:3000/api/tasks/edit-task/${id}`,
+      url: `https://test.traficoanalytica.com/api/tasks/edit-task/${id}`,
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,

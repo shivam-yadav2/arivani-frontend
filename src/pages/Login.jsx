@@ -33,7 +33,7 @@ const Login = () => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://localhost:3000/api/users/login",
+      url: "https://test.traficoanalytica.com/api/users/login",
       headers: {
         "Content-Type": "application/json",
       },

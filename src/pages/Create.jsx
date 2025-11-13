@@ -32,7 +32,7 @@ const Create = () => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://localhost:3000/api/tasks/create-task",
+      url: "https://test.traficoanalytica.com/api/tasks/create-task",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
